@@ -71,10 +71,10 @@ def supplier_list(request):
     return list_items(request, Supplier, 'employee_list.html', 'suppliers')
 
 def supplier_add(request):
-    return add_item(request, Supplier, ['name','email','phone','raw_material_name'], 'supplier_add.html', 'supplier_list')
+    return add_item(request, Supplier, ['name','email','phone','Raw_Material'], 'supplier_add.html', 'supplier_list')
 
 def supplier_edit(request, sl):
-    return edit_item(request, Supplier, sl, ['name','email','phone','raw_material_name','address'], 'supplier_edit.html', 'supplier_list')
+    return edit_item(request, Supplier, sl, ['name','email','phone','Raw_Material','address'], 'supplier_edit.html', 'supplier_list')
 
 def supplier_delete(request, sl):
     return delete_item(request, Supplier, sl, 'supplier_list')
